@@ -4,6 +4,7 @@
         "url": "http://packages.newicon.net/"
     } ],
     "require": {
-        "newicon/nii": "dev-master"
+        "newicon/nii"	: "dev-master",
+        "newicon/deploy": "dev-master"
     }
 }
