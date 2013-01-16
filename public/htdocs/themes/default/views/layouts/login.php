@@ -4,11 +4,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="language" content="en" />
 		<title><?php echo CHtml::encode($this->pageTitle); ?></title>
-		<?php Yii::app()->bootstrap->registerBootstrap(); ?>
-		<?php Yii::app()->bootstrap->registerScriptFile('bootstrap-tabs.js'); ?>
-		<?php Yii::app()->bootstrap->registerScriptFile('bootstrap-dropdown.js'); ?>
-		<?php Yii::app()->bootstrap->registerScriptFile('bootstrap-modal.js'); ?>
-		<?php Yii::app()->bootstrap->registerScriptFile('bootstrap-alerts.js'); ?>
+		<?php Yii::app()->bootstrap->registerCoreCss(); ?>
+		<?php Yii::app()->bootstrap->registerCoreScripts(); ?>
 		<link rel="stylesheet" media="print" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/print.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css" />
 		

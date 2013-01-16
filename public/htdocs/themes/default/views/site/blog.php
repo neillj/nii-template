@@ -5,3 +5,4 @@ $this->breadcrumbs=array(
 );
 ?>
 <h1>Blog</h1>
+<?php __('jdbfkjerflkenflkef erjf elrfjlekrfj l') ?>
