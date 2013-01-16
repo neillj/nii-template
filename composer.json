@@ -1,0 +1,9 @@
+{
+    "repositories": [ {
+        "type": "composer", 
+        "url": "http://packages.newicon.net/"
+    } ],
+    "require": {
+        "newicon/nii": "dev-master"
+    }
+}
