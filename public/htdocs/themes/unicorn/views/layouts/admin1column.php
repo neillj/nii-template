@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/unicorn.grey.css" class="skin-color" />
 		<link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css" />
 		<script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/unicorn.js"></script>
+		<?php Yii::app()->bootstrap->register(); ?>
 		<!--<script src="<?php // echo Yii::app()->theme->baseUrl; ?>/js/unicorn.dashboard.js"></script>-->
 <!--		<script src="js/excanvas.min.js"></script>
 		<script src="js/jquery.min.js"></script>
@@ -114,7 +115,7 @@
 			<div id="content-header">
 				<h1><?php echo $this->title ?></h1>
 				<?php
-					$this->widget('ext.bootstrap.widgets.TbButtonGroup',array(
+					$this->widget('bootstrap.widgets.TbButtonGroup',array(
 						'buttons'=>$this->actionsMenu,
 					));
 				?>
