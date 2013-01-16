@@ -1,0 +1,15 @@
+require 'bundler/capistrano'
+
+load 'deploy' if respond_to?(:namespace) # cap2 differentiator
+
+require File.join(File.dirname(__FILE__), 'config', 'boot')
+require File.join(File.dirname(__FILE__), 'lib', 'recipes', 'deploy')
+
+if project_type
+	Dir[File.join(File.dirname(__FILE__), "lib/recipes/#{project_type}/*.rb")].sort.each { |lib| require lib }
+	require File.join(File.dirname(__FILE__), 'lib', 'recipes', project_type)
+end
+
+require 'capistrano/ext/multistage'
+
+load File.join('config', 'deploy')

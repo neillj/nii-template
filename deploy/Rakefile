@@ -1,0 +1,7 @@
+require 'rake'
+
+require File.join(File.dirname(__FILE__), 'config' ,'boot')
+
+Dir[File.join(DEPLOY_ROOT, 'lib', 'tasks', '**', '*.rake')].each do |task_file|
+  load task_file
+end

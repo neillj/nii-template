@@ -1,0 +1,1 @@
+<?php $this->widget('nii.widgets.NBreadcrumbs', array('links' => $this->breadcrumbs,)); ?>
