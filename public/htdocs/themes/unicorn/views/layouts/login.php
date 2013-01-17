@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/unicorn.grey.css" class="skin-color" />
 		<link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css" />
 		<script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/unicorn.js"></script>
+		<?php Yii::app()->bootstrap->register(); ?>
 	</head>
 	<body class="login-page">
 		<div class="page">
