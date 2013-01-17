@@ -44,7 +44,11 @@
                         <li><a class="sTrash" title="" href="#">trash</a></li>
                     </ul>-->
 				</li>
-                <li class="btn btn-inverse dropdown" id="menu-user"><a href="#" data-toggle="dropdown" data-target="#menu-user" class="dropdown-toggle"><i class="icon icon-user"></i> <span class="text">Luke Spencer</span> <b class="caret"></b></a>
+                <li class="btn btn-inverse dropdown" id="menu-user">
+					<a href="#" data-toggle="dropdown" data-target="#menu-user" class="dropdown-toggle">
+						<i class="icon icon-user"></i> 
+						<span class="text"><?php echo Yii::app()->user->name ?></span> <b class="caret"></b>
+					</a>
                     <?php
 						Yii::app()->menus->addDivider('user', 'User');
 						Yii::app()->menus->addItem('user', 'Logout', array('/user/account/logout'), 'User');
