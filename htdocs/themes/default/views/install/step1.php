@@ -44,8 +44,16 @@
 	<fieldset>
 		<legend>Database Details</legend>
 		
+		<?php echo $form->error($dbForm, 'db', array('class'=>'errorMessage alert alert-error')); // shows general database errors if in debug mode ?>
+        
+        <div class="control-group <?php echo ($dbForm->hasErrors('dbDriver'))?'error':''; ?>">
+			<?php echo $form->labelEx($dbForm, 'dbDriver'); ?>
+			<div class="controls large">
+				<?php echo $form->dropDownList($dbForm, 'dbDriver', $dbForm->dbDriverList); ?>
+				<?php echo $form->error($dbForm, 'dbDriver'); ?>
+			</div>
+		</div>
 		<div class="control-group <?php echo ($dbForm->hasErrors('host'))?'error':''; ?>">
-			<?php echo $form->error($dbForm, 'db', array('class'=>'errorMessage alert alert-error')); // shows general database errors if in debug mode ?>
 			<?php echo $form->labelEx($dbForm, 'host'); ?>
 			<div class="controls large">
 				<?php echo $form->textField($dbForm, 'host'); ?>
