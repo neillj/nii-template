@@ -8,7 +8,7 @@ return array (
     array (
       'connectionString' => 'mysql:host=localhost;dbname=newiconadmin_development',
       'username' => 'root',
-      'password' => '500tps',
+      'password' => '',
       'tablePrefix' => '',
     ),
   ),
