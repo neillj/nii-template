@@ -23,17 +23,12 @@ $h3Color = Yii::app()->getModule('admin')->h3Color;
 <?php endif; ?>
 <div id="message"></div>
 <div class="head">
-	<?php if (Yii::app()->getModule('admin')->logo) : ?>
-		<div id="sitelogo">
-			<a href="<?php echo NHtml::url('/admin'); ?>">
-				<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo Yii::app()->getModule('admin')->logo ?>" />
-			</a>
-		</div>
-	<?php endif; ?>
 		<div class="navbar navbar-static-top">
 			<div class="navbar-inner">
 				<?php if (Yii::app()->getModule('admin')->menuAppname) : ?>
-					<a class="brand" style="padding:0px;" href="<?php echo NHtml::url('/admin'); ?>"><img src="<?php echo Yii::app()->baseUrl; ?>/images/newicon-brick.png" width="123" height="29"/></a>
+					<a class="brand" style="padding:0px;" href="<?php echo NHtml::url('/admin'); ?>">
+						<img src="<?php echo Yii::app()->baseUrl; ?>/themes/default/images/newicon-brick.png" width="123" height="29"/>
+					</a>
 				<?php else : ?>
 					<ul class="nav">
 						<li>
@@ -56,6 +51,7 @@ $h3Color = Yii::app()->getModule('admin')->h3Color;
 					</form>
 				<?php endif; ?>
 				<?php
+				
 				Yii::app()->menus->addDivider('user', 'User');
 				Yii::app()->menus->addItem('user', 'Logout', array('/user/account/logout'), 'User');
 				Yii::app()->menus->setUsername(Yii::app()->user->name);
@@ -63,15 +59,11 @@ $h3Color = Yii::app()->getModule('admin')->h3Color;
 					'items' => Yii::app()->menus->getItems('user'),
 					'id' => 'userMenu',
 					'activateParents' => true,
-					'htmlOptions' => array('class' => 'nav pull-right'),
-					'submenuHtmlOptions' => array('class' => 'dropdown-menu'),
 				));
 				$this->widget('nii.widgets.NMenu', array(
 					'items' => Yii::app()->menus->getItems('secondary'),
 					'id' => 'secondaryMenu',
 					'activateParents' => true,
-					'htmlOptions' => array('class' => 'nav pull-right'),
-					'submenuHtmlOptions' => array('class' => 'dropdown-menu'),
 				));
 				?>
 			</div>

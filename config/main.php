@@ -49,7 +49,7 @@ return array(
 			'application.modules.user.models.*',
 			'application.modules.user.components.*',
 		),
-		'theme' => 'unicorn',
+		'theme' => 'default',
 		'modulePath' => $modules,
 		'modules' => array(
 			'nii',
@@ -69,7 +69,7 @@ return array(
 		// application components
 		'components' => array(
 			'db'=>array(
-				//'emulatePrepare' => true,
+				'emulatePrepare' => true,
 				'charset' => 'utf8',
 			),
 			'menus' => array(
