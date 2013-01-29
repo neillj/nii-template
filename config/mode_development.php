@@ -44,9 +44,9 @@ return array(
 					array(
 						'class'=>'CFileLogRoute',
 					),
-//					array(
-//						'class'=>'dev.widgets.yii-debug-toolbar.YiiDebugToolbarRoute',
-//					)
+					array(
+						'class'=>'dev.widgets.yii-debug-toolbar.YiiDebugToolbarRoute',
+					)
 				),
 			),
 			// development mode we want to profile the database and have debug options

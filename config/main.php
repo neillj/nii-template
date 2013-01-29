@@ -86,7 +86,7 @@ return array(
 				'authTimeout'=>2592000 // logs the user out after a period of activity.
 			),
 			'authManager' => array(
-				'class' => 'NDbAuthManager',
+				'class' => 'NDbCacheAuthManager',
 				'connectionID' => 'db',
 				'assignmentTable' => 'auth_assignment',
 				'itemChildTable' => 'auth_item_child',
